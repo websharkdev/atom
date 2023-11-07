@@ -5,6 +5,7 @@ import LogoBlock from "./Logo";
 import Navbar from "./Navbar";
 import ModeToggle from "./ThemeToggle";
 import Spinner from "./Spinner";
+import SearchCommand from "./SearchCommand";
 
 export {
   LogoBlock,
@@ -14,4 +15,5 @@ export {
   Navbar,
   ModeToggle,
   Spinner,
+  SearchCommand,
 };

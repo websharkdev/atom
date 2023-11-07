@@ -1,6 +1,6 @@
 "use client";
 
-import { Spinner } from "@/components/layout";
+import { SearchCommand, Spinner } from "@/components/layout";
 import { useConvexAuth } from "convex/react";
 import { redirect } from "next/navigation";
 import { Navigation } from "./_components";
@@ -27,7 +27,10 @@ const MainLayout = ({ children }: Props) => {
   return (
     <div className="h-full flex dark:bg-[#1f1f1f]">
       <Navigation />
-      <main className="flex-1 overflow-y-auto h-full">{children}</main>
+      <main className="flex-1 overflow-y-auto h-full">
+        <SearchCommand />
+        {children}
+      </main>
     </div>
   );
 };
