@@ -24,6 +24,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { useSearch } from "@/shared/hooks/useSearch";
 
 type Props = {};
 
@@ -32,6 +33,7 @@ const Navigation = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   const isResizingRef = useRef(false);
+  const search = useSearch();
 
   const sidebarRef = useRef<ElementRef<"aside">>(null);
   const navbarRef = useRef<ElementRef<"div">>(null);
@@ -144,7 +146,7 @@ const Navigation = (props: Props) => {
         </div>
         <div>
           <UserItem />
-          <Item onClick={() => {}} label="Search" isSearch icon={Search} />
+          <Item onClick={search.onOpen} label="Search" isSearch icon={Search} />
           <Item onClick={() => {}} label="Settings" icon={Settings} />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
