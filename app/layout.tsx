@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Meta from "@/utils/meta/Meta";
-import { ThemeProvider, ConvexClientProvider } from "@/components/providers";
+import {
+  ThemeProvider,
+  ConvexClientProvider,
+  ModalProvider,
+} from "@/components/providers";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
@@ -39,6 +43,7 @@ export default function RootLayout({
               storageKey="atom-theme"
             >
               <Toaster position="bottom-center" />
+              <ModalProvider />
               {children}
             </ThemeProvider>
           </ConvexClientProvider>

@@ -110,7 +110,7 @@ const Item = ({
     >
       {!!id && (
         <div
-          className="rounded-sm h-full hover:bg-neutral-300 dark:bg-neutral-600 mr-1"
+          className="rounded-sm h-full hover:bg-neutral-300 dark:hover:bg-neutral-600 mr-1"
           onClick={handleExpand}
           role="button"
         >
