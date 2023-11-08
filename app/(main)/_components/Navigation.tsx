@@ -10,10 +10,10 @@ import {
   Settings,
   Trash,
 } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { ElementRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
-import { UserItem, Item, DocumentList, Trashbox } from "./index";
+import { UserItem, Item, DocumentList, Trashbox, Navbar } from "./index";
 
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
@@ -36,6 +36,8 @@ const Navigation = (props: Props) => {
   const isResizingRef = useRef(false);
   const search = useSearch();
   const settings = useSettings();
+
+  const params = useParams();
 
   const sidebarRef = useRef<ElementRef<"aside">>(null);
   const navbarRef = useRef<ElementRef<"div">>(null);
@@ -183,15 +185,19 @@ const Navigation = (props: Props) => {
           isMobile && "left-0 w-full"
         )}
       >
-        <nav className="bg-transparent px-3 py-2 w-full">
-          {isCollapsed && (
-            <MenuIcon
-              onClick={resetWidth}
-              className="w-6 aspect-square text-muted-foreground"
-              role="button"
-            />
-          )}
-        </nav>
+        {!!params.documentId ? (
+          <Navbar isCollapsed={isCollapsed} onResetWidth={resetWidth} />
+        ) : (
+          <nav className="bg-transparent px-3 py-2 w-full">
+            {isCollapsed && (
+              <MenuIcon
+                onClick={resetWidth}
+                className="w-6 aspect-square text-muted-foreground"
+                role="button"
+              />
+            )}
+          </nav>
+        )}
       </div>
     </>
   );
