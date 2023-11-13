@@ -8,6 +8,7 @@ import Spinner from "./Spinner";
 import SearchCommand from "./SearchCommand";
 import Toolbar from "./Toolbar";
 import IconPicker from "./Icon-Picker";
+import Cover from "./Cover";
 
 export {
   LogoBlock,
@@ -20,4 +21,5 @@ export {
   SearchCommand,
   Toolbar,
   IconPicker,
+  Cover,
 };
