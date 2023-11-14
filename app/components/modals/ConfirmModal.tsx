@@ -42,7 +42,7 @@ const ConfirmModal = ({ children, onConfirm }: Props) => {
             Cancel
           </AlertDialogCancel>
           <AlertDialogAction onClick={handleConfirm}>
-            I'm sure
+            I&apos;m sure
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
