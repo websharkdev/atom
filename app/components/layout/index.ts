@@ -5,6 +5,11 @@ import LogoBlock from "./Logo";
 import Navbar from "./Navbar";
 import ModeToggle from "./ThemeToggle";
 import Spinner from "./Spinner";
+import SearchCommand from "./SearchCommand";
+import Toolbar from "./Toolbar";
+import IconPicker from "./Icon-Picker";
+import Cover from "./Cover";
+import Editor from "./Editor";
 
 export {
   LogoBlock,
@@ -14,4 +19,9 @@ export {
   Navbar,
   ModeToggle,
   Spinner,
+  SearchCommand,
+  Toolbar,
+  IconPicker,
+  Cover,
+  Editor,
 };
