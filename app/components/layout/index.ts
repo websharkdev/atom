@@ -9,6 +9,7 @@ import SearchCommand from "./SearchCommand";
 import Toolbar from "./Toolbar";
 import IconPicker from "./Icon-Picker";
 import Cover from "./Cover";
+import Editor from "./Editor";
 
 export {
   LogoBlock,
@@ -22,4 +23,5 @@ export {
   Toolbar,
   IconPicker,
   Cover,
+  Editor,
 };

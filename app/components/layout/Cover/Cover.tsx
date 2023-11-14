@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { useEdgeStore } from "@/lib/edgestore";
@@ -71,3 +72,7 @@ const Cover = ({ url, preview }: Props) => {
 };
 
 export default Cover;
+
+Cover.Sceleton = function CoverSceleton() {
+  return <Skeleton className="w-full h-[12vh]" />;
+};
