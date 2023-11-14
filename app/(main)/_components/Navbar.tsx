@@ -5,7 +5,7 @@ import { useQuery } from "convex/react";
 import { MenuIcon } from "lucide-react";
 import { useParams } from "next/navigation";
 import React from "react";
-import { Banner, Title, Menu } from "./index";
+import { Banner, Title, Menu, Publish } from "./index";
 
 type Props = {
   isCollapsed: boolean;
@@ -46,6 +46,7 @@ const Navbar = ({ isCollapsed, onResetWidth }: Props) => {
         <div className="flex items-center justify-between w-full">
           <Title initialData={document} />
           <div className="flex items-center gap-x-2">
+            <Publish initialData={document} />
             <Menu documentId={document._id} />
           </div>
         </div>

@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import Title from "./Title";
 import Banner from "./Banner";
 import Menu from "./Menu";
+import Publish from "./Publish";
 
 export {
   Item,
@@ -18,4 +19,5 @@ export {
   Title,
   Banner,
   Menu,
+  Publish,
 };

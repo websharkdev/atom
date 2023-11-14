@@ -7,6 +7,7 @@ import {
   ModalProvider,
 } from "@/components/providers";
 import { Toaster } from "sonner";
+import { EdgeStoreProvider } from "./lib/edgestore";
 
 export const metadata: Metadata = {
   title: "Atom.",
@@ -35,17 +36,19 @@ export default function RootLayout({
       <Meta title="webshark">
         <body>
           <ConvexClientProvider>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-              storageKey="atom-theme"
-            >
-              <Toaster position="bottom-center" />
-              <ModalProvider />
-              {children}
-            </ThemeProvider>
+            <EdgeStoreProvider>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+                storageKey="atom-theme"
+              >
+                <Toaster position="bottom-center" />
+                <ModalProvider />
+                {children}
+              </ThemeProvider>
+            </EdgeStoreProvider>
           </ConvexClientProvider>
         </body>
       </Meta>
