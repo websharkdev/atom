@@ -67,7 +67,7 @@ const Publish = ({ initialData }: Props) => {
     <Popover>
       <PopoverTrigger asChild>
         <Button size="sm" variant="ghost">
-          Published
+          {initialData.isPublished ? 'Published' : 'Publish'}
           {initialData.isPublished && (
             <GlobeIcon className="w-4 h-4 aspect-square object-contain text-sky-500 ml-2" />
           )}
